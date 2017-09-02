@@ -13,3 +13,15 @@ post '/users' do
     erb :'users/new'
   end
 end
+
+get '/users/:user_id' do
+  authenticate!
+  @user = User.find_by(id: params[:user_id])
+  erb :'users/show'
+end
+
+get '/users/:user_id/channels' do
+  authenticate!
+  @user = User.find_by(id: params[:user_id])
+  erb :'users/show'
+end

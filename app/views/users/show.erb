@@ -1,0 +1,24 @@
+<h3>Profile</h3>
+
+<strong>Your subscribtions:</strong>
+<% if @user.channels.any? %>
+  <ul>
+    <% @user.channels.each do |chan| %>
+        <li><%= chan.name %></li>
+
+
+
+
+
+**********
+
+
+        <a href="">Unsubscribe</a>
+    <% end %>
+  </ul>
+    <p>Cost of your package:</p>
+    <strong><%=@user.channels.map(&:price_per_month).reduce("+")%> </strong>
+<% else %>
+    <p>You don't have any!</p>
+<% end %>
+

@@ -15,4 +15,8 @@ helpers do
   def authorized?
     session[:user_id] == params[:id].to_i
   end
+
+  def subscribed?
+    current_user.channels.include?(@channel.id)
+  end
 end

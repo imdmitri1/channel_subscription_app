@@ -1,8 +1,24 @@
 <h3><%= @channel.callsign %> </h3>
+
 <p><%= @channel.name %> </p>
 <p>just $<%= @channel.price_per_month %> per month</p>
 <p>Hurry up! <strong> <%= @channel.users.count%> </strong> already sighed up!</p>
 <% if logged_in? && subscribed? %>
+
+
+
+
+
+
+
+
+
+**********
+
+
+
+
+
 <a href="">Unsubscribe</a>
 <% else %>
 <a href="">Subscribe!</a>
