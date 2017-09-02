@@ -20,8 +20,15 @@ get '/users/:user_id' do
   erb :'users/show'
 end
 
-get '/users/:user_id/channels' do
+post '/users/:user_id/:channel_id' do
   authenticate!
   @user = User.find_by(id: params[:user_id])
-  erb :'users/show'
+  @user.channels << Channel.find_by(id: params[:channel_id])
+  redirect back
+end
+
+delete '/users/:user_id/:channel_id' do
+  authenticate!
+  @user = User.find_by(id: params[:user_id])
+  redirect back
 end

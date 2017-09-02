@@ -3,23 +3,13 @@
 <p><%= @channel.name %> </p>
 <p>just $<%= @channel.price_per_month %> per month</p>
 <p>Hurry up! <strong> <%= @channel.users.count%> </strong> already sighed up!</p>
+
 <% if logged_in? && subscribed? %>
-
-
-
-
-
-
-
-
-
-**********
-
-
-
-
-
-<a href="">Unsubscribe</a>
+  <form action="/users/<%=current_user.id%>/<%=@channel.id%>" method="post">
+    <input type="submit" value="Unsubscribe">
+  </form>
 <% else %>
-<a href="">Subscribe!</a>
+  <form action="/users/<%=current_user.id%>/<%=@channel.id%>" method="post">
+    <input type="submit" value="Subscribe!">
+  </form>
 <% end %>
