@@ -10,6 +10,24 @@
   <title></title>
 </head>
 <body>
+
+  <nav>
+    <ul class="nav-links">
+        <%if logged_in?%>
+         <li><a href="/users/<%= current_user.id %>"><%= current_user.first_name %> <%=current_user.last_name %></a></li>
+          <li >
+            <form method="post" action="/sessions">
+              <input type="hidden" name="_method" value="DELETE" />
+              <input type="submit" value="Logout" id="b_to_l">
+            </form>
+          </li>
+        <% else %>
+          <li><a href="/sessions/new">Login</a></li>
+          <li><a href="/users/new">Sign Up</a></li>
+        <% end %>
+    </ul>
+ </nav>
+
   <%= yield %>
 </body>
 </html>

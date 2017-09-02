@@ -1,4 +1,25 @@
-.container {
+body {
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+
+#b_to_l  {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: -webkit-link;
+    text-decoration: underline;
+    cursor: auto;
+ }
+
+nav {
+  float: right;
+  /*list-style: none;*/
+}
+
+/*.container {
   margin: 20px auto;
   width: 800px;
   padding: 0px 20px 20px 20px;
@@ -72,4 +93,4 @@ form.quirks {
   text-align: right;
   margin-right: 20px;
   width: 200px;
-}
+}*/

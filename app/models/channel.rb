@@ -1,3 +1,4 @@
 class Channel < ApplicationRecord
-  # Remember to create a migration!
+  has_many :subscriptions
+  has_many :users, through: :subscriptions
 end
