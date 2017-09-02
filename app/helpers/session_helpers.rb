@@ -17,6 +17,6 @@ helpers do
   end
 
   def subscribed?
-    current_user.channels.include?(@channel.id)
+    current_user.channels.include?(@channel)
   end
 end

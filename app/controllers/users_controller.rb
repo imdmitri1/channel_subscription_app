@@ -29,6 +29,8 @@ end
 
 delete '/users/:user_id/:channel_id' do
   authenticate!
+  # Subscription.where("channel_id=? and user_id=?", params[:channel_id], params[:user_id]).destroy
   @user = User.find_by(id: params[:user_id])
+  @user.subscriptions.find_by(channel_id: params[:channel_id]).destroy
   redirect back
 end

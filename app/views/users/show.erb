@@ -5,15 +5,10 @@
   <ul>
     <% @user.channels.each do |chan| %>
         <li><%= chan.name %></li>
-
-
-
-
-
-**********
-
-
-        <a href="">Unsubscribe</a>
+        <form action="/users/<%=@user.id%>/<%=chan.id%>" method="post">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Unsubscribe">
+        </form>
     <% end %>
   </ul>
     <p>Cost of your package:</p>
@@ -21,4 +16,6 @@
 <% else %>
     <p>You don't have any!</p>
 <% end %>
+
+<p><a href="/channels">Main</a> </p>
 
