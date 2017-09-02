@@ -2,7 +2,7 @@
 
 <strong>Your subscribtions:</strong>
 <% if @user.channels.any? %>
-  <ul>
+  <ul class="prof">
     <% @user.channels.each do |chan| %>
         <li><%= chan.name %></li>
         <form action="/users/<%=@user.id%>/<%=chan.id%>" method="post">

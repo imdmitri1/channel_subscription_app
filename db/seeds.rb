@@ -25,3 +25,4 @@ users.each do |user|
                          channel: channel)
   end
 end
+

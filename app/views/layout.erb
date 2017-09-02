@@ -10,15 +10,17 @@
   <title></title>
 </head>
 <body>
+<div class="head">
   <a href="/index">
     <h1>Tomcast</h1>
     <p> <strong>Best channels for you!</strong></p>
   </a>
+</div>
   <nav>
     <ul class="nav-links">
         <%if logged_in?%>
-        <li>Hi, <%= current_user.first_name %> <%=current_user.last_name %></li>
-         <li><a href="/users/<%= current_user.id %>">my profile</a></li>
+        <li class="name">Hi, <%= current_user.first_name %> <%=current_user.last_name %></li>
+         <li><a href="/users/<%= current_user.id %>">Profile</a></li>
          <li >
             <form method="post" action="/sessions">
               <input type="hidden" name="_method" value="DELETE" />

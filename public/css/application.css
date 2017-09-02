@@ -1,6 +1,9 @@
 body {
   max-width: 700px;
   margin: 10px auto;
+  background-image: url("tv.jpg");
+  /*background-color: rgba(0,0,0,0.6);*/
+  /*background-color:hsla(120,100%,75%,0.3);*/
 }
 
 
@@ -14,11 +17,69 @@ body {
     cursor: auto;
  }
 
-nav {
+nav  {
   float: right;
-  /*list-style: none;*/
+  list-style: none;
+
 }
 
+li  {
+  color: gray;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+.errors * {
+  color: red;
+}
+
+.head {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #1b3560;
+  link
+}
+
+.list {
+  margin-left: -40px;
+  margin-top: 40px;
+}
+
+.name {
+  text-transform: capitalize;
+
+}
+a:link {
+    color: red;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: red;
+}
+
+.prof li {
+  line-height: 1.5em;
+  padding-top: 20px;
+}
 /*.container {
   margin: 20px auto;
   width: 800px;

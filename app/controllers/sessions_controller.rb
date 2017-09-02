@@ -16,5 +16,5 @@ end
 
 delete '/sessions' do
   session.delete(:user_id)
-  redirect '/'
+  redirect '/channels'
 end
