@@ -10,7 +10,7 @@ class User < ApplicationRecord
   end
 
   def password=(new_password)
-#   @raw_password = new_password
+ #   @raw_password = new_password
     @password = BCrypt::Password.create(new_password)
     self.hashed_password = @password
   end
@@ -19,9 +19,10 @@ class User < ApplicationRecord
     self.password == password && self.email == email
   end
 
-#  validate :password_length
-#  def password_length
-#    errors.add(:password, "must be at least six characters") unless @raw_password.length >= 6
-#  end
+   # validate :password_length
+
+   # def password_length
+   #   errors.add(:password, "must be at least six characters") unless @raw_password.length >= 6
+   # end
 
 end

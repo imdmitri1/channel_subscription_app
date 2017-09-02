@@ -1,14 +1,7 @@
 get '/' do
-
-  erb :index
+  redirect '/channels'
 end
 
-
 get '/index' do
-  # if current_user?
-    # erb :index
-  # else
-  #   redirect '/sessions/new'
-  # end
-  redirect '/'
+  redirect '/channels'
 end

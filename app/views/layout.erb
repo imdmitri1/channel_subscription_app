@@ -10,12 +10,16 @@
   <title></title>
 </head>
 <body>
-
+  <a href="/index">
+    <h1>Tomcast</h1>
+    <p> <strong>Best channels for you!</strong></p>
+  </a>
   <nav>
     <ul class="nav-links">
         <%if logged_in?%>
-         <li><a href="/users/<%= current_user.id %>"><%= current_user.first_name %> <%=current_user.last_name %></a></li>
-          <li >
+        <li>Hi, <%= current_user.first_name %> <%=current_user.last_name %></li>
+         <li><a href="/users/<%= current_user.id %>">my profile</a></li>
+         <li >
             <form method="post" action="/sessions">
               <input type="hidden" name="_method" value="DELETE" />
               <input type="submit" value="Logout" id="b_to_l">

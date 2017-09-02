@@ -1,0 +1,14 @@
+
+<% if logged_in? %>
+<ul>
+  <% @channels.each do |chan| %>
+  <li><a href="/channels/<%=chan.id%>"><%= chan.name %> (<%=chan.callsign%>)</a></li>
+  <% end %>
+</ul>
+<% else %>
+<ul>
+  <% @channels.each do |chan| %>
+  <li><%= chan.name %> (<%=chan.callsign%>)</li>
+  <% end %>
+</ul>
+<% end %>
