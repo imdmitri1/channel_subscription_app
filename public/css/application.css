@@ -2,6 +2,7 @@ body {
   max-width: 700px;
   margin: 10px auto;
   background-image: url("tv.jpg");
+  background-repeat: no-repeat;
   /*background-color: rgba(0,0,0,0.6);*/
   /*background-color:hsla(120,100%,75%,0.3);*/
 }
@@ -52,7 +53,7 @@ li  {
 
 }
 a:link {
-    color: red;
+    color: brown;
   text-decoration: none;
 }
 
@@ -63,22 +64,35 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-    color: hotpink;
+    color: blue;
 }
 
 /* selected link */
 a:active {
-    color: blue;
+    color: orange;
 }
 
 input[type="submit"] {
-  background-color: black;
+  background-color: orange;
   color: red;
+  border-radius: 10px;
+}
+
+input[type="submit"]:active {
+  background-color: yellow;
+  border: none;
+  box-shadow: none;
 }
 
 .prof li {
   line-height: 1.5em;
   padding-top: 20px;
+}
+
+.reg input {
+  display: block;
+  margin: 5px;
+  /*border-radius: 5px;*/
 }
 /*.container {
   margin: 20px auto;

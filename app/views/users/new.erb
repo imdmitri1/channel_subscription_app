@@ -3,7 +3,7 @@
 
 <%= erb :'partials/_errors', layout: false, locals: {errors: @user.errors.full_messages} %>
 
-<form action="/users" method="Post">
+<form class="reg" action="/users" method="Post">
   <input type="text" placeholder="first name" name="user[first_name]" value="<%=@user.first_name%>">
   <input type="text" placeholder="last name" name="user[last_name]" value="<%=@user.last_name%>">
   <input type="text" placeholder="email" name="user[email]" value="<%=@user.email%>">

@@ -2,7 +2,11 @@
 
 <p><%= @channel.name %> </p>
 <p>just $<%= @channel.price_per_month %> per month</p>
-<p>Hurry up! <strong> <%= @channel.users.count%> </strong> already sighed up!</p>
+<% if subscribed? %>
+  <p>You and <strong> <%= @channel.users.count%> </strong> already signed up!</p>
+<% else %>
+  <p>Hurry up! <strong> <%= @channel.users.count%> </strong> already signed up!</p>
+<% end %>
 
 <% if logged_in? && subscribed? %>
   <form action="/users/<%=current_user.id%>/<%=@channel.id%>" method="post">

@@ -4,7 +4,7 @@
 <% if @user.channels.any? %>
   <ul class="prof">
     <% @user.channels.each do |chan| %>
-        <li><%= chan.name %></li>
+        <li><a href="/channels/<%=chan.id%> "> <%= chan.name %></a></li>
         <form action="/users/<%=@user.id%>/<%=chan.id%>" method="post">
           <input type="hidden" name="_method" value="delete">
           <input type="submit" value="Unsubscribe">
