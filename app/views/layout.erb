@@ -10,30 +10,33 @@
   <title></title>
 </head>
 <body>
-<div class="head">
-  <a href="/index">
-    <h1>Tomcast</h1>
-    <p> <strong>Best channels for you!</strong></p>
-  </a>
-</div>
-  <nav>
-    <ul class="nav-links">
-        <%if logged_in?%>
-        <li class="name">Hi, <%= current_user.first_name %> <%=current_user.last_name %></li>
-         <li><a href="/users/<%= current_user.id %>">Profile</a></li>
-         <li >
-            <form method="post" action="/sessions">
-              <input type="hidden" name="_method" value="DELETE" />
-              <input type="submit" value="Logout" id="b_to_l">
-            </form>
-          </li>
-        <% else %>
-          <li><a href="/sessions/new">Login</a></li>
-          <li><a href="/users/new">Sign Up</a></li>
-        <% end %>
-    </ul>
- </nav>
+<div class="container">
+
+  <div class="head">
+    <a href="/index">
+      <h1>Tomcast</h1>
+      <p> <strong>Best channels for you!</strong></p>
+    </a>
+  </div>
+    <nav>
+      <ul class="nav-links">
+          <%if logged_in?%>
+          <li class="name">Hi, <%= current_user.first_name %> <%=current_user.last_name %></li>
+           <li><a href="/users/<%= current_user.id %>">Profile</a></li>
+           <li >
+              <form method="post" action="/sessions">
+                <input type="hidden" name="_method" value="DELETE" />
+                <input type="submit" value="Logout" id="b_to_l">
+              </form>
+            </li>
+          <% else %>
+            <li><a href="/sessions/new">Login</a></li>
+            <li><a href="/users/new">Sign Up</a></li>
+          <% end %>
+      </ul>
+   </nav>
 
   <%= yield %>
+</div>
 </body>
 </html>

@@ -2,7 +2,7 @@ class User < ApplicationRecord
   has_many :subscriptions
   has_many :channels, through: :subscriptions
 
-  validates_presence_of :first_name, :last_name, :email, :hashed_password, :password
+  validates_presence_of :first_name, :last_name, :email, :hashed_password
   validates_uniqueness_of :email
   validate :password_length
 
