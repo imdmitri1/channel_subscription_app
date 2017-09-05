@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '~> 2.2', '>= 2.2.2'
-
+gem 'cowsay'
 # PostgreSQL driver
 gem 'pg', '~> 0.18'
 
