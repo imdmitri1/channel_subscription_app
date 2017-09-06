@@ -19,5 +19,8 @@ gem 'shotgun'
 
 group :development, :test do
   gem 'faker', '~> 1.7.3'
+  end
+group :test do
+  gem 'rspec', '~> 3.5'
+  # gem 'faker', '~> 1.7.3'
 end
-  # gem 'rspec', '~> 3.5'
